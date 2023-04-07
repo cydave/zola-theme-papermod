@@ -32,7 +32,7 @@ show_reading_time = true
 show_word_count = false
 show_post_nav_links = true
 show_post_meta = true
-default_toc_open = true
+default_toc_open = false
 edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
 copyright = ""
 date_format = "%Y-%m-%d"
@@ -43,5 +43,6 @@ home_content = "Welcome to a demo of the PaperMod theme!<br><b>PaperMod</b> is a
 social_icons = [
     { url = "https://github.com/cydave", title = "GitHub", icon = "github" },
     { url = "https://infosec.exchange/@cydave", title = "Mastodon", icon = "mastodon" },
+    { url = "https://twitter.com/_cydave", title = "Twitter", icon = "twitter" },
     { url = "$BASE_URL/atom.xml", title = "RSS", icon = "rss" },
 ]
