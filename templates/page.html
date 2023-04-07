@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+{% block main %}
+<article class="post-single">
+  <header class="post-header">
+      <div class="breadcrumbs">
+          <a href="{{ config.base_url }}">Home</a>&nbsp;»&nbsp;
+          <a href="{{ get_url(path='@/posts/_index.md') }}">Posts</a>&nbsp;»&nbsp;
+          <a href="{{ page.permalink }}">{{ page.title }}</a>
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <div class="post-description">
+          {{ page.description }}
+      </div>
+      {% endif %}
+      {% if config.extra.papermod.show_post_meta and config.extra.papermod.show_post_meta == true %}
+      <div class="post-meta">
+      {% include "partials/post_meta.html" %}
+      {% include "partials/edit_post.html" %}
+      </div>
+      {% endif %}
+  </header>
+
+  {% if config.extra.papermod.show_toc | default(value=true) %}
+  {% include "partials/toc.html" %}
+  {% endif %}
+
+  {% if page.content %}
+  <div class="post-content">
+      {{ page.content | safe }}
+  </div>
+  {% endif %}
+
+  <footer class="post-footer">
+      {% if page.taxonomies.tags %}
+      <ul class="post-tags">
+          {% for tag in page.taxonomies.tags %}
+          {% set tag_url = get_taxonomy_url(kind="tags", name=tag, lang=page.lang) %}
+          <li><a href="{{ tag_url }}">{{ tag }}</a></li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+
+    {% if config.extra.papermod.show_post_nav_links and config.extra.papermod.show_post_nav_links == true %}
+    {% include "partials/post_nav_links.html" %}
+    {% endif %}
+    {# TODO #}
+    {#- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end #}
+  </footer>
+
+</article>
+{% endblock %}

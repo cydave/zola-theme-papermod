@@ -1,0 +1,8 @@
+{% import 'macros/social_icon.svg.html' as macro_social -%}
+<div class="social-icons">
+    {% for social_icon in config.extra.papermod.social_icons %}
+    <a href="{{ social_icon.url | replace(from='$BASE_URL', to=config.base_url) }}" target="_blank" rel="noopener noreferrer me" title="{{ social_icon.title }}">
+        {{ macro_social::factory(icon=social_icon.icon) }}
+    </a>
+    {% endfor %}
+</div>

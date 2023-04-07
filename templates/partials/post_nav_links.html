@@ -1,0 +1,20 @@
+{% set posts_section = get_section(path="posts/_index.md") %}
+{% set num_posts = posts_section | length %}
+{% if num_posts > 1 %}
+<nav class="paginav">
+    {% if page.higher %}
+    <a class="prev" href="{{ page.higher.permalink }}">
+        <span class="title">« Prev</span>
+        <br>
+        <span>{{ page.higher.title }}</span>
+    </a>
+    {% endif %}
+    {% if page.lower %}
+    <a class="next" href="{{ page.lower.permalink }}">
+        <span class="title">Next »</span>
+        <br>
+        <span>{{ page.lower.title }}</span>
+    </a>
+    {% endif %}
+</nav>
+{% endif %}

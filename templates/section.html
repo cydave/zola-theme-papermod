@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block main %}
+<header class="page-header">
+    <div class="breadcrumbs">
+        <a href="{{ config.base_url }}">Home</a>
+    </div>
+    <h1>Posts
+        <a href="{{ section.permalink }}" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9"></path>
+        <path d="M4 4a16 16 0 0 1 16 16"></path>
+        <circle cx="5" cy="19" r="1"></circle>
+      </svg>
+    </a>
+  </h1>
+</header>
+{% for page in paginator.pages %}
+<article class="post-entry">
+  <header class="entry-header">
+      <h2>{{ page.title }}</h2>
+  </header>
+  {% if page.extra.hide_summary and page.extra.hide_summary == false %}
+  <div class="entry-content">
+      <p>{{ page.summary }}</p>
+  </div>
+  {% endif %}
+  <footer class="entry-footer">
+      {% include "partials/post_meta.html" %}
+  </footer>
+  <a class="entry-link" aria-label="post link to {{ page.title }}" href="{{ page.permalink }}"></a>
+</article>
+{% endfor %}
+{% endblock %}

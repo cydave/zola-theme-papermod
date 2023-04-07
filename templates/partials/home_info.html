@@ -1,0 +1,14 @@
+{% import "macros/social_icon.svg.html" as macro_social -%}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ config.extra.papermod.home_title }}</h1>
+    </header>
+    <div class="entry-content">
+        {% block home_entry_content %}
+        {{ config.extra.papermod.home_content | markdown(inline=true) | safe }}
+        {% endblock %}
+    </div>
+    <footer class="entry-footer">
+        {% include "partials/social_icons.html" %}
+    </footer>
+</article>

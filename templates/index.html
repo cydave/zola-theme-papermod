@@ -1,0 +1,17 @@
+{% import "macros/social_icon.svg.html" as macro_social -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ config.extra.papermod.language_direction }}">
+<head>
+    {% include "partials/head.html" %}
+</head>
+<body class="{% if section or term or taxonomy %}list {% endif %}{% if config.extra.papermod.theme == 'dark' %} dark{% endif %}" id="top">
+    {% include "partials/header.html" %}
+    <main class="main">
+        {% block main %}
+        {% include "partials/home_info.html" %}
+        {% include "partials/home_posts.html" %}
+        {% endblock %}
+    </main>
+    {% include "partials/footer.html" %}
+</body>
+</html>

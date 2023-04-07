@@ -1,0 +1,36 @@
+{% if page.toc %}
+{% set expand_toc = page.extra.toc_open | default(value=config.extra.papermod.default_toc_open) %}
+<div class="toc">
+    <details {% if expand_toc == true %} open{% endif %}>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner">
+            <ul>
+                {% for h1 in page.toc %}
+                <li>
+                    <a href="#{{ h1.id }}" aria-label="{{ h1.title }}">{{ h1.title }}</a>
+                    {% if h1.children | length > 0 %}
+                    <ul>
+                    {% for h2 in h1.children %}
+                        <li>
+                            <a href="#{{ h2.id }}" aria-label="{{ h2.title }}">{{ h2.title }}</a>
+                            {% if h2.children | length > 0 %}
+                            <ul>
+                                {% for h3 in h2.children %}
+                                <li><a href="#{{ h3.id }}" aria-label="{{ h3.title }}">{{ h3.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </details>
+</div>
+{% endif %}

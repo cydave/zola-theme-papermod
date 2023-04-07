@@ -1,0 +1,16 @@
+{% set meta = [] %}
+
+{% set formatted_date_long = page.date | date(format="%Y-%m-%d %H:%M:%S %z") %}
+{% set formatted_date_short = page.date | date(format=config.extra.papermod.date_format) %}
+{% set meta = meta | concat(with='<span title="' ~ formatted_date_long ~ '">' ~ formatted_date_short ~ '</span>') %}
+
+{% if config.extra.papermod.show_reading_time and config.extra.papermod.show_reading_time == true %}
+{% set meta = meta | concat(with=page.reading_time ~ " min") %}
+{% endif %}
+
+{% if config.extra.papermod.show_word_count and config.extra.papermod.show_word_count == true %}
+{% set meta = meta | concat(with=page.word_count ~ " words") %}
+{% endif %}
+
+{% set meta = meta | concat(with=page.author | default(value=config.author)) %}
+{{ meta | join(sep="&nbsp;·&nbsp;") | safe }}

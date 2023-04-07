@@ -1,0 +1,47 @@
+# The URL the site will be built for
+author = "cydave"
+base_url = "https://example.com"
+compile_sass = true
+build_search_index = true
+generate_feed = true
+minify_html = true
+
+
+taxonomies = [
+    { name = "tags", feed = true }
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+custom_url = "$BASE_URL/atom.xml"
+
+[extra.papermod]
+custom_url = "$BASE_URL/atom.xml"
+title = "PaperMod"
+default_theme = "auto"
+theme = "light"
+language_direction = "auto"
+keywords = ["keyword1", "keyword2", "keyword3"]
+disable_theme_toggle = false
+show_code_copy_buttons = true
+show_reading_time = true
+show_word_count = false
+show_post_nav_links = true
+show_post_meta = true
+default_toc_open = true
+edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
+copyright = ""
+date_format = "%Y-%m-%d"
+
+
+home_title = "PaperMod"
+home_content = "Welcome to a demo of the PaperMod theme!<br><b>PaperMod</b> is a simple but fast and responsive theme with a useful feature-set that enhances UX.<br>Do give a 🌟 on Github !<br>PaperMod is based on the hugo-PaperMod theme."
+social_icons = [
+    { url = "https://github.com/cydave", title = "GitHub", icon = "github" },
+    { url = "https://infosec.exchange/@cydave", title = "Mastodon", icon = "mastodon" },
+    { url = "$BASE_URL/atom.xml", title = "RSS", icon = "rss" },
+]

@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+templates/taxonomy_list.html
+
+{% block main %}
+<header class="page-header">
+    <h1>Tags</h1>
+</header>
+
+<ul class="terms-tags">
+    {% for term in terms %}
+    <li>
+        <a href="{{ term.permalink }}">{{ term.name }} <sup><strong><sup>{{ term.page_count }}</sup></strong></sup> </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
