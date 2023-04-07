@@ -1,6 +1,6 @@
 # The URL the site will be built for
 author = "cydave"
-base_url = "https://example.com"
+base_url = "https://cydave.github.io/zola-theme-papermod"
 compile_sass = true
 build_search_index = true
 generate_feed = true
