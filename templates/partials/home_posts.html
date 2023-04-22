@@ -4,9 +4,9 @@
   <header class="entry-header">
       <h2>{{ page.title }}</h2>
   </header>
-  {% if page.extra.hide_summary and page.extra.hide_summary == false %}
+  {% if page.summary %}
   <div class="entry-content">
-      <p>{{ page.summary }}</p>
+      <p>{{ page.summary |safe }}</p>
   </div>
   {% endif %}
   <footer class="entry-footer">

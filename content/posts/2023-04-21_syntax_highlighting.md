@@ -2,16 +2,19 @@
 title = "Syntax highlighting"
 +++
 
+This is a page summary, it should show up in the main posts area and provide
+readers with a preview.
+
+<!-- more -->
+
 ## Some examples
 
 ### TOML
 
 ```toml
 [extra]
-custom_url = "$BASE_URL/atom.xml"
 
 [extra.papermod]
-custom_url = "$BASE_URL/atom.xml"
 title = "PaperMod"
 default_theme = "auto"
 theme = "light"

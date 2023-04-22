@@ -17,10 +17,8 @@ taxonomies = [
 highlight_code = true
 
 [extra]
-custom_url = "$BASE_URL/atom.xml"
 
 [extra.papermod]
-custom_url = "$BASE_URL/atom.xml"
 title = "PaperMod"
 default_theme = "auto"
 theme = "light"
@@ -36,7 +34,11 @@ default_toc_open = false
 edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
 copyright = ""
 date_format = "%Y-%m-%d"
-
+navigation = [
+    { url = "$BASE_URL/archive", title = "Archive" },
+    { url = "$BASE_URL/tags", title = "Tags" },
+    { url = "https://getzola.com/", title = "Zola", is_external = true }
+]
 
 home_title = "PaperMod"
 home_content = "Welcome to a demo of the PaperMod theme!<br><b>PaperMod</b> is a simple but fast and responsive theme with a useful feature-set that enhances UX.<br>Do give a 🌟 on Github !<br>PaperMod is based on the hugo-PaperMod theme."
