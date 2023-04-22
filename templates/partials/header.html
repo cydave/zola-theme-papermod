@@ -59,7 +59,7 @@
             {% set url = item.url | replace(from='$BASE_URL', to=config.base_url) %}
             <li>
                 <a href="{{ url }}" title="{{ item.title }}">
-                    <span{% if current_url and url == current_url %} class="active"{% endif %}>
+                    <span{% if current_url and url | trim_end_matches(pat="/") == current_url| trim_end_matches(pat="/") %} class="active"{% endif %}>
                     {{ item.title }}
                     </span>
                     {% if item.is_external and item.is_external == true %}
