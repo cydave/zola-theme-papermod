@@ -54,14 +54,14 @@
                 </ul>
             </div>
         </div>
+        {% if config.extra.papermod.navigation %}
         <ul id="menu">
             {% for item in config.extra.papermod.navigation %}
             {% set url = item.url | replace(from='$BASE_URL', to=config.base_url) %}
+            {% set is_active_link = current_url and url | trim_end_matches(pat="/") == current_url | trim_end_matches(pat="/") %}
             <li>
                 <a href="{{ url }}" title="{{ item.title }}">
-                    <span{% if current_url and url | trim_end_matches(pat="/") == current_url| trim_end_matches(pat="/") %} class="active"{% endif %}>
-                    {{ item.title }}
-                    </span>
+                    <span{% if is_active_link %} class="active"{% endif %}>{{ item.title }}</span>
                     {% if item.is_external and item.is_external == true %}
                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
                         <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
@@ -73,25 +73,6 @@
             </li>
             {% endfor %}
         </ul>
-        {## $currentPage := . }}
-        <ul id="menu">
-            {#
-            {{- range .Site.Menus.main }}
-            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
-            {{- $page_url:= $currentPage.Permalink | absLangURL }}
-            {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
-            <li>
-                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
-                {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
-                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
-                        {{- .Pre }}
-                        {{- .Name -}}
-                        {{ .Post -}}
-                    </span>
-                </a>
-            </li>
-            {{- end }}
-            #}
-        </ul>
+        {% endif %}
     </nav>
 </header>
