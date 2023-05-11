@@ -83,7 +83,7 @@
 {% endif %}
 {% if config.extra.papermod.show_code_copy_buttons %}
 <script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
+    document.querySelectorAll('pre > code table').forEach((codeblock) => {
         const container = codeblock.parentNode.parentNode;
 
         const copybutton = document.createElement('button');

@@ -1,49 +1,28 @@
-.post-content pre,
-.post-content code,
-.post-content pre code,
-.post-content code table,
-.post-content pre table,
-.post-content table tr,
-.post-content table th,
-.post-content table td {
-    width: 100%;
-    border: 0;
-    border-spacing: 0;
-    margin: 0;
-    padding: 0;
-}
-
-.post-content pre,
-.post-content pre code {
-    border-radius: 8px;
-}
-
-
-.post-content pre {
-    width: 100%;
-    overflow-x: auto;
-    word-break: break-all;
-    margin: 0;
-    padding: 0;
-}
-
-.post-content pre > code {
-    margin: 0;
-    padding: 15px;
-    display: block;
-    overflow-x: auto;
-    word-break: break-all;
-}
-
 .post-content pre code > table {
-    overflow-x: auto;
-    word-break: break-all;
+    display: table;
+    margin: 10px auto;
+    border-radius: var(--radius);
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
 }
-
-
-.post-content pre table td:nth-of-type(1) {
-    text-align: right;
+.post-content pre code > table td {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.post-content pre code > table td:first-child {
+    white-space: pre;
     user-select: none;
-    white-space: nowrap;
-    padding: 0 26px 0 0px;
+    margin: 0;
+    padding: 0 1em 0 0;
+    color: #7f7f7f;
+    text-align: right;
+    display: table-cell;
+    max-width: 10%;
+}
+.post-content pre code > table td:nth-child(2) {
+    width: 90%;
 }
