@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block main %}
+<header class="page-header">
+  <h1>
+    Archive
+    <a href="{{ '$BASE_URL/atom.xml' | replace(from='$BASE_URL', to=config.base_url) }}" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9"></path>
+        <path d="M4 4a16 16 0 0 1 16 16"></path>
+        <circle cx="5" cy="19" r="1"></circle>
+      </svg>
+    </a>
+  </h1>
+</header>
+{% set posts_section = get_section(path="posts/_index.md") %}
+{% set yearly_posts = posts_section.pages | group_by(attribute="year") %}
+{% for year, posts in yearly_posts %}
+<div class="archive-year">
+    <h2 class="archive-year-header">{{ year }}<sup class="archive-count">&nbsp;&nbsp;{{ posts | length }}</sup></h2>
+    {% set monthly_posts = posts | group_by(attribute="month") %}
+    {% for month, posts in monthly_posts %}
+    {% set month_name = posts[0].date | date(format="%B") %}
+    <div class="archive-month">
+        <h3 class="archive-month-header">{{ month_name }}<sup class="archive-count">&nbsp;&nbsp;{{ posts | length }}</sup></h3>
+        <div class="archive-posts">
+            {% for post in posts %}
+            {% set formatted_date_long = post.date | date(format="%Y-%m-%d %H:%M:%S %z") %}
+            {% set formatted_date_short = post.date | date(format=config.extra.papermod.date_format) %}
+            <div class="archive-entry">
+                <h3 class="archive-entry-title">{{ post.title }}</h3>
+                <div class="archive-meta"><span title="{{ formatted_date_long }}">{{ formatted_date_short }}</span>&nbsp;·&nbsp;{{ post.reading_time }} min&nbsp;·&nbsp;{{ post.author | default(value=config.author) }}</div>
+                <a class="entry-link" aria-label="post link to {{ post.title }}" href="{{ post.permalink }}"></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endblock %}
