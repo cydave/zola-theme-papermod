@@ -13,7 +13,7 @@
           {{ page.description }}
       </div>
       {% endif %}
-      {% if config.extra.papermod.show_post_meta and config.extra.papermod.show_post_meta == true %}
+      {% if config.extra.papermod.show_post_meta | default(value=true) %}
       <div class="post-meta">
       {% include "partials/post_meta.html" %}
       {% include "partials/edit_post.html" %}
@@ -41,7 +41,7 @@
       </ul>
       {% endif %}
 
-    {% if config.extra.papermod.show_post_nav_links and config.extra.papermod.show_post_nav_links == true %}
+    {% if config.extra.papermod.show_post_nav_links | default(value=true) %}
     {% include "partials/post_nav_links.html" %}
     {% endif %}
     {# TODO #}

@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="{{ get_url(path='css/styles.css') }}">
 <link rel="stylesheet" href="{{ get_url(path='css/override.css') }}">
 
+{% block head_favicons %}
 {# /* Favicons */}
 <link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
@@ -39,8 +40,8 @@
 <meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
 #}
+{% endblock %}
 
-{#- /* RSS */#}
 {% if config.generate_feed %}
 <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
 {% endif %}
@@ -84,12 +85,12 @@
     {% endif %}
 </noscript>
 
-{#- partial "extend_head.html" . -#}
-
-{#- /* Misc */}}
-{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-{{- template "_internal/google_analytics.html" . }}
-{{- template "partials/templates/opengraph.html" . }}
-{{- template "partials/templates/twitter_cards.html" . }}
-{{- template "partials/templates/schema_json.html" . }}
-{{- end -#}
+{% block ext_head %}
+    {#- /* Misc */}}
+    {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+    {{- template "_internal/google_analytics.html" . }}
+    {{- template "partials/templates/opengraph.html" . }}
+    {{- template "partials/templates/twitter_cards.html" . }}
+    {{- template "partials/templates/schema_json.html" . }}
+    {{- end -#}
+{% endblock %}

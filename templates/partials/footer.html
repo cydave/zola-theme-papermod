@@ -1,17 +1,17 @@
 <footer class="footer">
-    {#- if .Site.Copyright #}
-    {#<!-- <span>{{ config.extra.papermod.copyright }}</span> -->#}
-    {#- else }
-    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>
-    {{- end #}
+    {% if config.extra.papermod.copyright %}
+    <span>{{ config.extra.papermod.copyright }}</span>
+    {% else %}
+    <span>&copy; {{ now() | date(format="%Y") }} <a href="{{ config.base_url }}">{{ config.author }}</a></span>
+    {% endif %}
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Zola</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://www.getzola.org/" rel="noopener noreferrer" target="_blank">Zola</a> &
+        <a href="https://github.com/cydave/zola-theme-papermod" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 
-{% if not config.extra.papermod.disable_scroll_to_top %}
+{% if config.extra.papermod.show_scroll_to_top %}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
@@ -51,7 +51,7 @@
 
 </script>
 
-{% if not config.extra.papermod.disable_scroll_to_top %}
+{% if config.extra.papermod.show_scroll_to_top|default(value=true) %}
 <script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
@@ -67,7 +67,7 @@
 </script>
 {% endif %}
 
-{% if not config.extra.papermod.disable_theme_toggle %}
+{% if config.extra.papermod.show_theme_toggle|default(value=true) %}
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
@@ -81,7 +81,7 @@
 
 </script>
 {% endif %}
-{% if config.extra.papermod.show_code_copy_buttons %}
+{% if config.extra.papermod.show_code_copy_buttons|default(value=true) %}
 <script>
     document.querySelectorAll('pre > code').forEach((codeblock) => {
         const container = codeblock.parentNode.parentNode;

@@ -1,5 +1,5 @@
-# The URL the site will be built for
 author = "cydave"
+title = "PaperMod"
 base_url = "https://cydave.github.io/zola-theme-papermod"
 compile_sass = true
 build_search_index = true
@@ -24,7 +24,8 @@ default_theme = "auto"
 theme = "light"
 language_direction = "auto"
 keywords = ["keyword1", "keyword2", "keyword3"]
-disable_theme_toggle = false
+show_theme_toggle = true
+show_scroll_to_top = true
 show_code_copy_buttons = true
 show_reading_time = true
 show_word_count = false
@@ -32,7 +33,7 @@ show_post_nav_links = true
 show_post_meta = true
 default_toc_open = false
 edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
-copyright = ""
+#copyright = ""
 date_format = "%Y-%m-%d"
 navigation = [
     { url = "$BASE_URL/archive", title = "Archive" },

@@ -2,16 +2,22 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}" dir="{{ config.extra.papermod.language_direction }}">
 <head>
+    {% block head %}
     {% include "partials/head.html" %}
+    {% endblock %}
 </head>
 <body class="{% if section or term or taxonomy %}list {% endif %}{% if config.extra.papermod.theme == 'dark' %} dark{% endif %}" id="top">
+    {% block header %}
     {% include "partials/header.html" %}
+    {% endblock %}
     <main class="main">
         {% block main %}
         {% include "partials/home_info.html" %}
         {% include "partials/home_posts.html" %}
         {% endblock %}
     </main>
+    {% block footer %}
     {% include "partials/footer.html" %}
+    {% endblock %}
 </body>
 </html>
