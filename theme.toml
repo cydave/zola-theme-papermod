@@ -1,5 +1,5 @@
 name = "PaperMod"
-description = ""
+description = "A fast, clean, responsive theme ported to Zola."
 license = "MIT"
 homepage = "https://github.com/cydave/zola-theme-papermod"
 min_version = "0.4.0"
