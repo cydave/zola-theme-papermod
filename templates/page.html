@@ -16,7 +16,9 @@
       {% if config.extra.papermod.show_post_meta | default(value=true) %}
       <div class="post-meta">
       {% include "partials/post_meta.html" %}
-      {% include "partials/edit_post.html" %}
+      {% if config.extra.papermod.show_post_edit_button %}
+          {% include "partials/edit_post.html" %}
+      {% endif %}
       </div>
       {% endif %}
   </header>
