@@ -98,7 +98,12 @@
 
         copybutton.addEventListener('click', (cb) => {
             if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
+                var content = codeblock.textContent;
+                if(codeblock.firstChild.tagName == 'TABLE') {
+                    content = Array(...codeblock.firstChild.getElementsByTagName('span')).map((span) => { return span.textContent; }).join('');
+                }
+                console.log(content);
+                navigator.clipboard.writeText(content);
                 copyingDone();
                 return;
             }

@@ -21,7 +21,7 @@ Demo @ https://cydave.github.io/zola-theme-papermod/
     + [ ] Regular Mode
     + [ ] Home-Info Mode
     + [ ] Profile Mode
-+ [ ] Code copy buttons
++ [x] Code copy buttons
 + [ ] Search page
 + [ ] SEO Metadata
 + [ ] Language switcher (multi-language support)
