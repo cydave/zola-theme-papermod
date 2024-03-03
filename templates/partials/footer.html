@@ -133,3 +133,8 @@
     });
 </script>
 {% endif %}
+
+{% if page.extra.is_search_page %}
+<script src="{{ get_url(path='elasticlunr.min.js') | safe }}"></script>
+<script src="{{ get_url(path='js/search.js') | safe }}"></script>
+{% endif %}
