@@ -1,5 +1,4 @@
-{% set posts = get_section(path="posts/_index.md") %}
-{% for page in posts.pages | slice(end=10) %}
+{% for page in paginator.pages %}
 <article class="post-entry">
   <header class="entry-header">
       <h2>{{ page.title }}</h2>
@@ -16,10 +15,15 @@
 </article>
 {% endfor %}
 
-{% if posts.pages | length > 5 %}
+{% if paginator %}
 <footer class="page-footer">
     <nav class="pagination">
-        <a class="next" href="#todo">Next »</a>
+    {% if paginator.previous %}
+        <a class="previous" href="{{ paginator.previous | safe }}">« Previous</a>
+    {% endif %}
+    {% if paginator.next %}
+        <a class="next" href="{{ paginator.next | safe }}">Next »</a>
+    {% endif %}
     </nav>
 </footer>
 {% endif %}
