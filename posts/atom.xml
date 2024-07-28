@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>PaperMod - Posts</title>
+    <link rel="self" type="application/atom+xml" href="https://cydave.github.io/zola-theme-papermod/posts/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod/posts/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-04-21T00:00:00+00:00</updated>
+    <id>https://cydave.github.io/zola-theme-papermod/posts/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Syntax highlighting</title>
+        <published>2023-04-21T00:00:00+00:00</published>
+        <updated>2023-04-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              cydave
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod/posts/syntax-highlighting/"/>
+        <id>https://cydave.github.io/zola-theme-papermod/posts/syntax-highlighting/</id>
+        
+        <summary type="html">&lt;p&gt;This is a page summary, it should show up in the main posts area and provide
+readers with a preview.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Example post 2</title>
+        <published>2023-04-07T00:00:00+00:00</published>
+        <updated>2023-04-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              cydave
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod/posts/example-post-2/"/>
+        <id>https://cydave.github.io/zola-theme-papermod/posts/example-post-2/</id>
+        
+        <summary type="html">&lt;p&gt;Consectetur eos similique exercitationem facere magni Sit ullam molestias.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Example post 1</title>
+        <published>2023-04-07T00:00:00+00:00</published>
+        <updated>2023-04-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              cydave
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod/posts/example-post/"/>
+        <id>https://cydave.github.io/zola-theme-papermod/posts/example-post/</id>
+        
+        <summary type="html">&lt;p&gt;Consectetur eos similique exercitationem facere magni Sit ullam molestias.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Markdown Examples</title>
+        <published>2023-02-04T15:00:00+00:00</published>
+        <updated>2023-02-04T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              cydave
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod/posts/markdown-example/"/>
+        <id>https://cydave.github.io/zola-theme-papermod/posts/markdown-example/</id>
+        
+        <summary type="html">&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in &lt;del&gt;Hugo&lt;&#x2F;del&gt; Zola content files, also it shows whether basic HTML elements are decorated with CSS in a &lt;del&gt;Hugo&lt;&#x2F;del&gt; Zola theme.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Installation | Update</title>
+        <published>2019-02-04T15:00:00+00:00</published>
+        <updated>2019-02-04T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              cydave
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod/posts/papermod-installation/"/>
+        <id>https://cydave.github.io/zola-theme-papermod/posts/papermod-installation/</id>
+        
+        <content type="html" xml:base="https://cydave.github.io/zola-theme-papermod/posts/papermod-installation/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#intro&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;guide&quot;&gt;Guide&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#guide&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;method-1&quot;&gt;Method 1&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#method-1&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;method-2&quot;&gt;Method 2&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#method-2&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;method-3&quot;&gt;Method 3&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#method-3&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+</content>
+        
+    </entry>
+</feed>
