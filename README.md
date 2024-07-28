@@ -3,7 +3,9 @@
 ![](screenshot.png)
 
 
-A work in progress port of the [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme by [@adityatelange](https://github.com/adityatelange) to [Zola](https://www.getzola.org/)
+A work in progress port of the [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme by [@adityatelange](https://github.com/adityatelange) to [Zola](https://www.getzola.org/) 
+
+Due to config changes introduced with Zola 0.19, only Zola 0.19.1 and later are currently supported.
 
 Demo @ https://cydave.github.io/zola-theme-papermod/
 
@@ -14,6 +16,7 @@ Demo @ https://cydave.github.io/zola-theme-papermod/
 + [x] Blog post RSS feeds
 + [x] Tags
 + [x] Tag-based RSS feeds
++ [x] Optional: Custom taxonomies
 + [x] Light / Dark theme switching (with configurable default preference)
 + [x] Syntax highlighting for code snippets (Zola's built-in syntax highlighting)
 + [x] Custom navigation
@@ -22,7 +25,7 @@ Demo @ https://cydave.github.io/zola-theme-papermod/
     + [ ] Home-Info Mode
     + [ ] Profile Mode
 + [x] Code copy buttons
-+ [ ] Search page
++ [x] Search page
 + [ ] SEO Metadata
 + [ ] Language switcher (multi-language support)
 

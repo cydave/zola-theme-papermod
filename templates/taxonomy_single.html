@@ -1,12 +1,16 @@
-{% extends 'index.html' %}
+{% extends "index.html" %}
 {% block main %}
+{% set taxonomy_title = taxonomy.name | replace(from="_",to=" ") | title %}
+
 <header class="page-header">
-    <div class="breadcrumbs">
-        <a href="{{ config.base_url }}">Home</a>
+    <div class="breadcrumbs"> 
+        <a href="{{ config.base_url }}">Home</a>&nbsp;»&nbsp;
+	<a href="{{ config.base_url }}/{{ taxonomy.name }}">{{ taxonomy_title }}</a>&nbsp;»&nbsp;
+        <a href="{{ current_url }}">{{ term.name }}</a>
     </div>
-    <h1>{{ section.title }}
+    <h1>{{ term.name | replace(from="_",to=" ") | title }}
       {% for feed_filename in config.feed_filenames %}
-      <a href="{{ get_url(path=feed_filename, trailingslash=false) | safe }}" title="RSS" aria-label="RSS">
+      <a href="{{ term.permalink ~ feed_filename }}" title="RSS" aria-label="RSS">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="23">
           <path d="M4 11a9 9 0 0 1 9 9"></path>
           <path d="M4 4a16 16 0 0 1 16 16"></path>
@@ -16,7 +20,7 @@
       {% endfor %}
   </h1>
 </header>
-{% for page in paginator.pages %}
+{% for page in term.pages %}
 <article class="post-entry">
   <header class="entry-header">
       <h2>{{ page.title }}</h2>
