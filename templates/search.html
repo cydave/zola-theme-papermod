@@ -6,7 +6,7 @@
     {% include "partials/head.html" %}
     {% endblock %}
 </head>
-<body class="{% if section or term or taxonomy %}list {% endif %}{% if config.extra.papermod.theme == 'dark' %} dark{% endif %}" id="top">
+<body class="list{% if config.extra.papermod.theme == 'dark' %} dark{% endif %}" id="top">
     {% block header %}
     {% include "partials/header.html" %}
     {% endblock %}

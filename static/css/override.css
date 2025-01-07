@@ -30,3 +30,9 @@
 .post-content pre code > table td:nth-child(2) {
     width: 92%;
 }
+#searchbox input {
+    background-color: var(--theme);
+}
+.dark #searchbox input {
+    background-color: var(--tertiary);
+}
