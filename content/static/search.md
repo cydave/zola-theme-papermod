@@ -1,6 +1,7 @@
 +++
 title = "Search"
-date = "2024-02-27"
+path = "search"
+aliases = ["/search"]
 template = "search.html"
 extra = { is_search_page = true }
 +++

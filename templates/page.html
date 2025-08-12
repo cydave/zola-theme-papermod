@@ -4,7 +4,10 @@
   <header class="post-header">
       <div class="breadcrumbs">
           <a href="{{ config.base_url }}">Home</a>&nbsp;»&nbsp;
+          {% set section = get_section(path=page.ancestors | last) %}
+          {% if not section.extra.hide_breadcrumb %}
           <a href="{{ get_url(path='@/posts/_index.md') }}">Posts</a>&nbsp;»&nbsp;
+          {% endif %}
           <a href="{{ page.permalink }}">{{ page.title }}</a>
       </div>
       <h1 class="post-title">{{ page.title }}</h1>

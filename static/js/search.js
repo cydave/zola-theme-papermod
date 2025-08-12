@@ -42,7 +42,7 @@ function initSearch() {
   };
   var currentTerm = "";
   var index;
-  
+
   var initIndex = async function () {
     if (index === undefined) {
       index = fetch("/search_index.en.json") // Make sure the path to your search index is correct

@@ -1,4 +1,5 @@
 {% for page in paginator.pages %}
+{% if not page.extra.exclude_from_home %}
 <article class="post-entry">
   <header class="entry-header">
       <h2>{{ page.title }}</h2>
@@ -13,6 +14,7 @@
   </footer>
   <a class="entry-link" aria-label="post link to {{ page.title }}" href="{{ page.permalink }}"></a>
 </article>
+{% endif %}
 {% endfor %}
 
 {% if paginator %}

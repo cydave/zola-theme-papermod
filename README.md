@@ -20,6 +20,7 @@ Demo @ https://cydave.github.io/zola-theme-papermod/
 + [x] Light / Dark theme switching (with configurable default preference)
 + [x] Syntax highlighting for code snippets (Zola's built-in syntax highlighting)
 + [x] Custom navigation
++ [x] Hide pages from home page by adding `extra = {exclude_from_home = true}` to front matter or adding markdown file to `content/static/` folder
 + [ ] 3 Modes:
     + [ ] Regular Mode
     + [ ] Home-Info Mode

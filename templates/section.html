@@ -16,6 +16,7 @@
       {% endfor %}
   </h1>
 </header>
+{% if paginator.pages %}
 {% for page in paginator.pages %}
 <article class="post-entry">
   <header class="entry-header">
@@ -32,4 +33,5 @@
   <a class="entry-link" aria-label="post link to {{ page.title }}" href="{{ page.permalink }}"></a>
 </article>
 {% endfor %}
+{% endif %}
 {% endblock %}
