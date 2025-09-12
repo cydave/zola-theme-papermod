@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>PaperMod - PaperMod</title>
+    <link rel="self" type="application/atom+xml" href="https://cydave.github.io/zola-theme-papermod/tags/papermod/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2019-02-04T15:00:00+00:00</updated>
+    <id>https://cydave.github.io/zola-theme-papermod/tags/papermod/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Installation | Update</title>
+        <published>2019-02-04T15:00:00+00:00</published>
+        <updated>2019-02-04T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              cydave
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cydave.github.io/zola-theme-papermod/posts/papermod-installation/"/>
+        <id>https://cydave.github.io/zola-theme-papermod/posts/papermod-installation/</id>
+        
+        <content type="html" xml:base="https://cydave.github.io/zola-theme-papermod/posts/papermod-installation/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#intro&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;guide&quot;&gt;Guide&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#guide&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;method-1&quot;&gt;Method 1&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#method-1&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;method-2&quot;&gt;Method 2&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#method-2&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;method-3&quot;&gt;Method 3&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#method-3&quot; hidden=&quot;&quot;&gt;#&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+</content>
+        
+    </entry>
+</feed>

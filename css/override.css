@@ -1,0 +1,38 @@
+.post-content pre,
+.post-content pre code {
+    border-radius: var(--radius);
+}
+.post-content pre code > table {
+    display: table;
+    margin: 10px auto;
+    border-radius: var(--radius);
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+.post-content pre code > table td {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.post-content pre code > table td:first-child {
+    white-space: pre;
+    user-select: none;
+    margin: 0;
+    padding: 0 1em 0 0;
+    color: #7f7f7f;
+    text-align: right;
+    display: table-cell;
+    max-width: 10%;
+}
+.post-content pre code > table td:nth-child(2) {
+    width: 92%;
+}
+#searchbox input {
+    background-color: var(--theme);
+}
+.dark #searchbox input {
+    background-color: var(--tertiary);
+}
